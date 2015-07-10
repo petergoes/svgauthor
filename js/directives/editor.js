@@ -25,8 +25,8 @@
 		}
 	}
 	/* @ngInject */
-	function EditorCTRL ($scope) {
+	function EditorCTRL ($scope, SVGData) {
 		var editor = this;
-		editor.value = "hello world editor";
+		editor.data = SVGData;
 	}
 })();

@@ -25,8 +25,8 @@
 		}
 	}
 	/* @ngInject */
-	function PreviewCTRL ($scope) {
+	function PreviewCTRL ($scope, SVGData) {
 		var preview = this;
-		preview.value = "hello world preview";
+		preview.data = SVGData;
 	}
 })();
