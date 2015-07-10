@@ -25,8 +25,13 @@
 		}
 	}
 	/* @ngInject */
-	function PreviewCTRL ($scope, SVGData) {
+	function PreviewCTRL ($scope, $sce, SVGData) {
 		var preview = this;
 		preview.data = SVGData;
+		preview.xml = '';
+
+		$scope.$watch('preview.data.xml', function() {
+			preview.xml = $sce.trustAsHtml(preview.data.xml);
+		});
 	}
 })();
